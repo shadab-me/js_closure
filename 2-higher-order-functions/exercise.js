@@ -62,8 +62,14 @@ function reduce(array, callback, initialValue) {
 
 //Extension 3
 function intersection(arrays) {
-
-    
+ return arrays.reduce((a, c) => {
+     a.forEach((e, i) => {
+         if(!c.includes(e)){
+             a.splice(i, 1);
+         }
+     })
+     return a;
+ })
 }
 
 // console.log(intersection([5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20]));
@@ -77,9 +83,7 @@ function union(...arrays) {
         if (!newAr.includes(num)) {
             newAr.push(num)
         }
- })
-
-
+    });
     return newAr
 }
 
@@ -88,13 +92,23 @@ function union(...arrays) {
 // should log: [5, 10, 15, 88, 1, 7, 100]
 
 //Extension 5
-function objOfMatches(array1, array2, callback) {}
+function objOfMatches(array1, array2, callback) {
+    let ob = {};
+    array1.forEach((word) => {
+        if (array2.includes(callback(word))) {
+            ob[word] = callback(word)
+        }
+    })
+    return ob;
+}
 
 // console.log(objOfMatches(['hi', 'howdy', 'bye', 'later', 'hello'], ['HI', 'Howdy', 'BYE', 'LATER', 'hello'], function(str) { return str.toUpperCase(); }));
 // should log: { hi: 'HI', bye: 'BYE', later: 'LATER' }
 
 //Extension 6
-function multiMap(arrVals, arrCallbacks) {}
+function multiMap(arrVals, arrCallbacks) {
+
+}
 
 // console.log(multiMap(['catfood', 'glue', 'beer'], [function(str) { return str.toUpperCase(); }, function(str) { return str[0].toUpperCase() + str.slice(1).toLowerCase(); }, function(str) { return str + str; }]));
 // should log: { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
