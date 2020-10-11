@@ -18,6 +18,10 @@ function sayHello(name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+//- re-write 
+```js
+var username = un
+```
 
 2.
 
