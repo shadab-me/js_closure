@@ -87,19 +87,11 @@ cricket(); // Your score of Cricket is 2
 6. Write a function called `getCard` which takes one of these options (club, spade, heart, dimond) returns a function calling that function returns random card (2,3,4,5,6,7,8,9,10,J, Q, K, A) of that suit.
 
 ```js
-function getCard(suit) {
-  // your code goes here
-  const options = ["club", "spade", "heart", "dimond"]
-  if(options.includes(suit.toLowerCase())) {
-    const cards = [2,3,4,5,6,7,8,9,10,"J", "Q", "K", "A"];
-    return function(){
-      const random = Math.floor(Math.random() * cards.length);
-      return `Card is: ${cards[random]} ${suit}`;
-    }
-  }s
-
+function getCard(){
+  let cards= ['club', 'spade', 'heart', 'dimod'];
+  
 }
-
+```
 // Output
 const randomClub = addGame("Club");
 randomClub(); // Card is: 6 Club

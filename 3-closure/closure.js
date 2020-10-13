@@ -25,7 +25,7 @@ function nonesense(string){
 }
 
 let blabLater = nonesense('Ali');
-let blabAgainLater = nonesense('Rai');
+let blabAgainLater = nonesense('Ali');
 console.log(blabLater, blabAgainLater);
 
 

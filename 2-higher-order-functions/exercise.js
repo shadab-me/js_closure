@@ -53,9 +53,9 @@ function mapWith(array, callback) {
 
 //Extension 2
 function reduce(array, callback, initialValue) {
-    let result = initialValue;
-    array.forEach(array, (e) => {
-        result = callback(result, e);
+    let result = array[0] || initialValue;
+    array.forEach(array, (item) => {
+        result = callback(result, item);
     });
     return result;
 }
@@ -93,13 +93,13 @@ function union(...arrays) {
 
 //Extension 5
 function objOfMatches(array1, array2, callback) {
-    let ob = {};
+    let finalOb = {};
     array1.forEach((word) => {
         if (array2.includes(callback(word))) {
             ob[word] = callback(word)
         }
     })
-    return ob;
+    return finalOb;
 }
 
 // console.log(objOfMatches(['hi', 'howdy', 'bye', 'later', 'hello'], ['HI', 'Howdy', 'BYE', 'LATER', 'hello'], function(str) { return str.toUpperCase(); }));
