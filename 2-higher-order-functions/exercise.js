@@ -54,7 +54,7 @@ function mapWith(array, callback) {
 //Extension 2
 function reduce(array, callback, initialValue) {
     let result = initialValue;
-    array.forEachO(array, (e) => {
+    array.forEach(array, (e) => {
         result = callback(result, e);
     });
     return result;
@@ -63,7 +63,7 @@ function reduce(array, callback, initialValue) {
 //Extension 3
 function intersection(arrays) {
  return arrays.reduce((a, c) => {
-     a.forEach((e, i) => {
+      a.forEach((e, i) => {
          if(!c.includes(e)){
              a.splice(i, 1);
          }

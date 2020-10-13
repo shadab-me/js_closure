@@ -37,3 +37,19 @@ function FullName(firstName){
 let name = FullName('Shadab');
 name('Ali');
 
+function storyWriter(){
+    let story;
+    return {
+        addWords: function(sen){
+            return story
+        },
+        erase: function(){
+            story = '';
+            return story
+        }
+    };
+}
+var storyOfMyLife = storyWriter();
+storyOfMyLife.addWords('My code broke.'); // 'My code broke.'
+storyOfMyLife.addWords('I ate some ice cream.'); //'My code broke. I ate some ice cream.'
+
