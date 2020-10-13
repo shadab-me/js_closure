@@ -367,3 +367,27 @@ function add(a, b) {
   return a + b;
 }
 ```
+```js
+// Declaration Phase
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+sum;
+function add(a, b) {
+  return a + b;
+}
+// Execution Phase
+sum = //function call
+  //F.E.C
+  //F.E.C D
+  a = undefined;
+  num1;
+  
+  // F.E.C E
+  a = 100;
+  num1 = 21;
+  return 121
+
+sum = 121
+```
