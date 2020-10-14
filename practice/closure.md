@@ -87,13 +87,6 @@ cricket(); // Your score of Cricket is 2
 6. Write a function called `getCard` which takes one of these options (club, spade, heart, dimond) returns a function calling that function returns random card (2,3,4,5,6,7,8,9,10,J, Q, K, A) of that suit.
 
 ```js
-function getCard(suit) {
-  return function () {
-    let arr = [2,3,4,5,6,7,8,9,10,"J", "Q", "K", "A"];
-    randomNum = Math.floor(Math.random() * 12);
-    return `Card is: ${arr[randomNum]} ${suit}`;
-  }
-}
 
 ```
 // Output
